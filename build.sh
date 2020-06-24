@@ -26,8 +26,8 @@ mount /dev/loop0p1 /mnt/${y}
 echo "Changing to /mnt/${y}"
 cd /mnt/${y}
 
-echo "Untarring rootfs $z/$1"
-tar -xpvf $z/$1 > /dev/null
+echo "Untarring rootfs $z/${1##*/}"
+tar -xpvf $z/${1##*/} > /dev/null
 
 echo "Changing out of mountpoint"
 cd /mnt
